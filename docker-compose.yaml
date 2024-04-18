@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ssl-certificate-scanner:
+    image: ghcr.io/clivewalkden/docker-ssl-certificate-scanner:main
+    volumes:
+      - ./external.yaml:/opt/phishing_catcher/external.yaml
+    networks:
+      - default
+
+networks:
+  default:

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! -f external.yaml ]; then
+    cp external.yaml.example external.yaml
+fi
+
+# Start Docker Compose
+docker compose up -d
+
+# Output logs
+docker compose logs -f
